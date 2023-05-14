@@ -1,5 +1,6 @@
-import { Head } from "$fresh/runtime.ts";
-import Counter from "../islands/Counter.tsx";
+import { Head } from "$fresh/runtime.ts"
+import Counter from "../islands/Counter.tsx"
+import Header from "../components/Header.tsx"
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <Head>
         <title>NanohaNote</title>
       </Head>
+      <Header />
       <div>
         <div>
           <img src="/NanohaNote.svg" class="mx-auto"/>
