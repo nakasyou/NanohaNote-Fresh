@@ -13,8 +13,7 @@ export default (props: PageProps) => {
       <title>{ props.params.id } | NanohaNote</title>
     </Head>
     <div>
-      <div contentEditable="true" onInput={onInput}>Content Editable</div>
+      <textarea></textarea>
     </div>
-   <div>{text}</div>
   </>
 }
