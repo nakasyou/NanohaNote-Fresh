@@ -7,11 +7,11 @@ export default function Home() {
       <Head>
         <title>NanohaNote</title>
       </Head>
-      <div class="mx-auto">
-        <div class="mx-auto">
-          <img src="/NanohaNote.svg"/>
+      <div>
+        <div>
+          <img src="/NanohaNote.svg" class="mx-auto"/>
         </div>
-        <div>NanohaNoteは、「じぶん」で作る学習用ノートブックです。</div>
+        <div class="mx-auto">NanohaNoteは、「じぶん」で作る学習用ノートブックです。</div>
       </div>
     </>
   );
