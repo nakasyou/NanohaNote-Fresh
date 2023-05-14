@@ -4,15 +4,17 @@ import { useState } from "preact/hooks"
 import Sheet from "../../components/notes/sheet.tsx"
 
 export default (props: PageProps) => {
-  const [text,setText] = useState(`
-    aaaaaaaa
-  `)
+  const [text,setText] = useState(``)
+  const onInput = e => {
+    setText(e.target.innerHTML)
+  }
   return <>
     <Head>
       <title>{ props.params.id } | NanohaNote</title>
     </Head>
     <div>
-      <div contentEditable="true">Content Editable</div>
+      <div contentEditable="true" onInput={onInput}>Content Editable</div>
     </div>
+   <div>{text}</div>
   </>
 }
