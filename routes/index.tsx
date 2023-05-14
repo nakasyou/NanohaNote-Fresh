@@ -8,6 +8,9 @@ export default function Home() {
         <title>NanohaNote</title>
       </Head>
       <div class="mx-auto">
+        <div class="mx-auto">
+          <img src="/NanohaNote.svg"/>
+        </div>
         <div>NanohaNoteは、「じぶん」で作る学習用ノートブックです。</div>
       </div>
     </>
