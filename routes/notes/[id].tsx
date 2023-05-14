@@ -1,6 +1,6 @@
 import { Head } from "$fresh/runtime.ts"
 import { PageProps } from "$fresh/server.ts"
-import { h, useState } from "$fresh/runtime.ts";
+import { useState } from "$preacr/hooks";
 
 export default (props: PageProps) => {
   const [text,setText] = useState(`
