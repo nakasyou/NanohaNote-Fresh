@@ -1,7 +1,9 @@
 export default () => {
-  return <div class="w-full flex">
+  return <div class="w-full flex drop-shadow-md">
     <div>
-      <img src="/icon.svg" alt="NanohaNote icon" />
+      <a href="/">
+        <img src="/icon.svg" alt="NanohaNote icon" />
+      </a>
     </div>
   </div>
 }
