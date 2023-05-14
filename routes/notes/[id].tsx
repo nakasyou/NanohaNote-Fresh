@@ -12,15 +12,7 @@ export default (props: PageProps) => {
       <title>{ props.params.id } | NanohaNote</title>
     </Head>
     <div>
-      {text}
-      <Sheet text="hidden" />
-    </div>
-    <div>
-      <div
-        dangerouslySetInnerHTML={{
-           __html: `<div>これはテストです</div><div><Sheet text="hidden" /></div>`
-        }}
-      />
+      <div contentEditable="true">Content Editable</div>
     </div>
   </>
 }
