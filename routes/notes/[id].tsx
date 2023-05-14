@@ -15,5 +15,12 @@ export default (props: PageProps) => {
       {text}
       <Sheet text="hidden" />
     </div>
+    <div>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: `これはテストです`
+        }}
+      />
+    </div>
   </>
 }
