@@ -18,7 +18,7 @@ export default (props: PageProps) => {
     <div>
       <div
         dangerouslySetInnerHTML={{
-          __html: `これはテストです`
+           __html: `<div>これはテストです</div><div><Sheet text="hidden" /></div>`
         }}
       />
     </div>
