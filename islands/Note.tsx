@@ -1,14 +1,14 @@
 import { PageProps } from "$fresh/server.ts"
 import { useRef } from "preact/hooks"
+import {
+  Editor,
+} from '@tiptap/core'
+import StarterKit from '@tiptap/starter-kit'
 
 export interface Props {
   pageProps: PageProps,
 }
 export default function(props: Props){
-  import {
-    Editor,
-  } from '@tiptap/core'
-  import StarterKit from '@tiptap/starter-kit'
 
   const noteRef = useRef(null)
   const editor = new Editor({
