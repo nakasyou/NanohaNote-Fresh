@@ -8,8 +8,12 @@ import { TipTapPluginNanoha } from "../utils/tiptap/PluginNanoha.ts"
 export interface Props {
   pageProps: PageProps,
 }
+import {
+  IconNote,
+  IconNoteOff,
+} from "@tabler/icons-preact"
+
 export default function(props: Props){
-  
   const noteRef = useRef(null)
   useEffect(() => {
     const editor = new Editor({
@@ -18,7 +22,7 @@ export default function(props: Props){
         StarterKit,
         TipTapPluginNanoha,
       ],
-      content: [...Array(10)].map(()=>'<p>これはTipTapのテストですわよ。<span class="nanoha-sheet">a</span></p>').join(""),
+      content: `<h2>NanohaNoteへようこそ!</h2><p>NanohaNoteは、「じぶん」で作る、学習用ノートブックです!<span class="nanoha-sheet">こんな感じに隠せます</span></p>`
     })
   }) 
   return <>
