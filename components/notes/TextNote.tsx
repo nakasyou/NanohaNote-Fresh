@@ -33,6 +33,7 @@ export default () => {
       }}>
         { editor?.isActive('sheet') ? <IconNote /> : <IconNoteOff />}
       </button>
+      { editor?.isActive('sheet')}
     </div>
   </div>
 }
