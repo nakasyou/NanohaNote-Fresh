@@ -2,7 +2,10 @@ import { useRef, useEffect, useState } from "preact/hooks"
 import { Editor } from '@tiptap/core'
 import StarterKit from '@tiptap/starter-kit'
 import { TipTapPluginNanoha } from "../../utils/tiptap/PluginNanoha.ts"
-
+import {
+  IconNote,
+  IconNoteOff,
+} from '@tabler/icons-preact'
 /**
  * TextNote
  * @remarks
@@ -24,5 +27,12 @@ export default () => {
   return <div>
     {/* ContentEditable */}
     <div ref={noteRef}></div>
+    <div>
+      <button onClick={()=>{
+        editor?.chain().focus().toggleBold().run()
+      }}>
+        { editor?.isActive('sheet') ? <IconNote /> : <IconNoteOff />}
+      </button>
+    </div>
   </div>
 }

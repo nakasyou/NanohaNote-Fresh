@@ -1,5 +1,7 @@
 {
     "compilerOptions": {
-        "allowImportingTsExtensions": true
+        "allowImportingTsExtensions": true,
+        "jsx": "react-jsx",
+        "jsxImportSource": "preact"
     }
 }
