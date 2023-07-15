@@ -29,11 +29,11 @@ export default () => {
     <div ref={noteRef}></div>
     <div>
       <button onClick={()=>{
-        editor?.chain().focus().toggleSheet().run()
+        editor?.chain().focus().toggleBold().run()
       }}>
-        { editor?.isActive('sheet') ? <IconNote /> : <IconNoteOff />}
+        { editor?.isActive('bold') ? <IconNote /> : <IconNoteOff />}
       </button>
-      { editor?.isActive('sheet')}
+      { editor?.isActive('bold') }
     </div>
   </div>
 }
