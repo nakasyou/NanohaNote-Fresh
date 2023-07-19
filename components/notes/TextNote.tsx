@@ -23,6 +23,9 @@ export default () => {
       ],
       content: `<h2>NanohaNoteへようこそ!</h2><p>NanohaNoteは、「じぶん」で作る、学習用ノートブックです!<span class="nanoha-sheet">こんな感じに隠せます</span></p>`
     }))
+    setInterval(() => {
+      alert(editor?.isActive('bold'))
+    }, 1000)
   }, [])
   return <div>
     {/* ContentEditable */}
