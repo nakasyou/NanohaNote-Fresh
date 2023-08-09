@@ -16,7 +16,7 @@ const Tiptap = () => {
   }, [])
   return (
     <>
-      { false && <EditorContent editor={editor} /> }
+      { editor && <EditorContent editor={editor} /> }
     </>
   )
 }
