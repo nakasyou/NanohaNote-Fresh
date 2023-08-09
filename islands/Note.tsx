@@ -15,7 +15,9 @@ const Tiptap = () => {
     setEditor(editor)
   }, [])
   return (
-    <EditorContent editor={editor} />
+    <>
+      { false && <EditorContent editor={editor} /> }
+    </>
   )
 }
 
