@@ -15,6 +15,7 @@ const Tiptap = () => {
     })
     setEditor(editor)
   }
+  setInterval(() => alert(IS_BROWSER), 1000)
   return (<div>
     { IS_BROWSER ? <EditorContent editor={editor} /> : "SSR" }
   </div>)
