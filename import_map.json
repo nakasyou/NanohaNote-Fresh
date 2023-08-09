@@ -9,6 +9,7 @@
     "twind": "https://esm.sh/twind@0.16.19",
     "twind/": "https://esm.sh/twind@0.16.19/",
     "@tiptap/": "https://esm.sh/@tiptap/",
-    "@tabler/icons-preact": "https://esm.sh/@tabler/icons-preact"
+    "@tabler/icons-preact": "https://esm.sh/@tabler/icons-preact",
+    "tiptap-preact": "https://esm.sh/gh/ueberdosis/tiptap@fd35db4d09/packages/react/src/index.ts?alias=react:preact/compat"
   }
 }
