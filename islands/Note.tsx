@@ -12,11 +12,13 @@ const Tiptap = () => {
       ],
       content: '<p>Hello World!</p>',
     })
-    return <>
+    /*return <>
       <EditorContent editor={editor} />
-    </>
+    </>*/
   }
-  return (<div>SSR</div>)
+  return (<div>
+    { IS_BROWSER ? "SSR" : "Browser" }
+  </div>)
 }
 
 export interface Props {
