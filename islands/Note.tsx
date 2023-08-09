@@ -1,5 +1,20 @@
 import { PageProps } from "$fresh/server.ts"
-import TextNote from "../components/notes/TextNote.tsx"
+import { useEditor, EditorContent } from 'tiptap-preact'
+import StarterKit from '@tiptap/starter-kit'
+
+const Tiptap = () => {
+  const editor = useEditor({
+    extensions: [
+      StarterKit,
+    ],
+    content: '<p>Hello World!</p>',
+  })
+
+  return (
+    <EditorContent editor={editor} />
+  )
+}
+
 export interface Props {
   pageProps: PageProps,
 }
@@ -7,6 +22,6 @@ export interface Props {
 export default function(props: Props){
   return <>
     <div>NanohaNote</div>
-    <TextNote />
+    <Tiptap />
   </>
 }
