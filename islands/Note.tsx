@@ -5,6 +5,7 @@ import { useEffect, useState } from "preact/hooks"
 import { IS_BROWSER } from "$fresh/runtime.ts"
 
 const Tiptap = () => {
+  const [editor, setEditor] = useState(null)
   if (IS_BROWSER) {
     const editor = useEditor({
       extensions: [
@@ -12,12 +13,10 @@ const Tiptap = () => {
       ],
       content: '<p>Hello World!</p>',
     })
-    /*return <>
-      <EditorContent editor={editor} />
-    </>*/
+    setEditor(editor)
   }
   return (<div>
-    { IS_BROWSER ? "SSR" : "Browser" }
+    { IS_BROWSER ? "SSR" : <EditorContent editor={editor} /> }
   </div>)
 }
 
