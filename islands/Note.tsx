@@ -16,7 +16,7 @@ const Tiptap = () => {
     setEditor(editor)
   }
   return (<div>
-    { IS_BROWSER ? "SSR" : <EditorContent editor={editor} /> }
+    { IS_BROWSER ? <EditorContent editor={editor} /> : "SSR" }
   </div>)
 }
 
