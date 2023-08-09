@@ -2,23 +2,21 @@ import { PageProps } from "$fresh/server.ts"
 import { useEditor, EditorContent } from 'tiptap-preact'
 import StarterKit from '@tiptap/starter-kit'
 import { useEffect, useState } from "preact/hooks"
+import { IS_BROWSER } from "$fresh/runtime.ts"
 
 const Tiptap = () => {
-  const [editor, setEditor] = useState(null)
-  useEffect(() => {
+  if (IS_BROWSER) {
     const editor = useEditor({
       extensions: [
         StarterKit,
       ],
       content: '<p>Hello World!</p>',
     })
-    setEditor(editor)
-  }, [])
-  return (
-    <>
-      { editor && <EditorContent editor={editor} /> }
+    return <>
+      <EditorContent editor={editor} />
     </>
-  )
+  }
+  return (<div>SSR</div>)
 }
 
 export interface Props {
